@@ -20,7 +20,6 @@ public class Ototype extends Game {
 	public void create () {
 		GameConstants constants = new GameConstants();
 		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
 		FreeTypeFontGenerator gen = new FreeTypeFontGenerator(Gdx.files.internal("fonts/robotomonolight.ttf"));
 		FreeTypeFontGenerator genThin = new FreeTypeFontGenerator(Gdx.files.internal("fonts/RobotoMono-Thin.ttf"));
 		FreeTypeFontGenerator genNoto = new FreeTypeFontGenerator(Gdx.files.internal("fonts/robotomonolight.ttf"));
