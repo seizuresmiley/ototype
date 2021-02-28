@@ -2,9 +2,6 @@ package com.ototype.game;
 
 import java.util.ArrayList;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
-
 public class TypeBuffer {
 	//typebuffer "new world" edition
 	//because screw what I did months ago.

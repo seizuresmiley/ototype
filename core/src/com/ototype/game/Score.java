@@ -1,7 +1,7 @@
 package com.ototype.game;
 
 public class Score {
-	private int combo,maxCombo,wordCount,score,missedWords,mode;
+	private int combo,maxCombo,wordCount,score,mode;
 	private Chart chart;
 	
 	public Score(Chart chart,PlayfieldDetails pfd) {

@@ -10,9 +10,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-
-
-import java.util.Date;
 public class SongSelectScreen extends ScreenAdapter {
 	Ototype game;
 	private ShapeRenderer shapeRenderer;

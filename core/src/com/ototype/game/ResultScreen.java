@@ -14,7 +14,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
-import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener.ChangeEvent;
 
 public class ResultScreen extends ScreenAdapter {
 	Ototype game;
@@ -22,7 +21,6 @@ public class ResultScreen extends ScreenAdapter {
 	private Stage stage;
 	private PlayfieldDetails pfDetails;
 	private TextButton button;
-	private TextButton middleButton;
 	private ShapeRenderer shapeRenderer;
 	private Texture coverImage;
 	float[] currentColor;

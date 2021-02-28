@@ -1,7 +1,6 @@
 package com.ototype.game;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 //don't screw with this again.
@@ -10,7 +9,6 @@ public class Chart {
 	public String[] lyrics;
 	public Integer[] time;
 	public Integer[][] targets;
-	private int mode;
 	
 
 	public Chart(String chartName) {

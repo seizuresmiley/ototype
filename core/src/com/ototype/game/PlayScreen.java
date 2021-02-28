@@ -2,15 +2,11 @@ package com.ototype.game;
 
 
 import java.io.IOException;
-
 import java.io.Reader;
-import java.nio.charset.Charset;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
@@ -22,7 +18,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 public class PlayScreen extends ScreenAdapter {
 	//if all else fails, restore "demented edition".
@@ -37,7 +32,6 @@ public class PlayScreen extends ScreenAdapter {
 	char currentKey;
 	Gson gson;
 	long currentTimePos,startTimePos;
-	private Integer[] timestamp;
 	GameConstants constants = new GameConstants();
 	TypeBuffer tbuf;
 	SongInfo songInfo;

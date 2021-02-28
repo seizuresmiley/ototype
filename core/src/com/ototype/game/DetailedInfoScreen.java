@@ -26,7 +26,6 @@ public class DetailedInfoScreen extends ScreenAdapter {
 	private ShapeRenderer shapeRenderer;
 	private Texture coverImage;
 	float[] currentColor;
-	private String artistKana,songKana;
 	private String resultText;
 	private Save[] saves;
 	
