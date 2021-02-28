@@ -59,7 +59,6 @@ public class Ototype extends Game {
 	@Override
 	public void dispose () {
 		batch.dispose();
-		img.dispose();
 	}
 	
 	public void resize() {
