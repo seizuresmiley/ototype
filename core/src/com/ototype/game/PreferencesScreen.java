@@ -44,11 +44,11 @@ public class PreferencesScreen extends ScreenAdapter {
 		 
 		 TextButton addButton = new TextButton("+",volButtonStyle);
 		 addButton.setSize(100,100);
-		 addButton.setPosition(590, 530);
+		 addButton.setPosition(590, 570);
 		
 		 TextButton decreaseButton = new TextButton("-",volButtonStyle);
 		 decreaseButton.setSize(100, 100);
-		 decreaseButton.setPosition(590, 270);
+		 decreaseButton.setPosition(590, 310);
 		 
 		 
 		 button.addListener(new ChangeListener() {
@@ -111,9 +111,13 @@ public class PreferencesScreen extends ScreenAdapter {
 		game.titleFont.setColor(Color.BLACK);
 		game.subtitleFont.setColor(Color.BLACK);
 		game.headerFont.setColor(Color.BLACK);
-		game.headerFont.draw(game.batch,Integer.toString(game.prefs.getVolume()),625, 450);
-		game.subtitleFont.draw(game.batch,"this is the volume.",530, 520);
+		game.headerFont.draw(game.batch,Integer.toString(game.prefs.getVolume()),625, 480);
+		game.subtitleFont.draw(game.batch,"this is the volume.",530, 550);
 		
+		game.subtitleFont.draw(game.batch,"How to play:",100, 300);
+		game.subtitleFont.draw(game.batch,"Type the words in pink to get score. No need to type punctuations.",125, 250);
+		game.subtitleFont.draw(game.batch,"Modes:",100, 200);
+		game.subtitleFont.draw(game.batch,"Overture : Only 1 word.    Regular : Some words.    Encore : ALL THE WORDS.",125, 150);
 		game.batch.end();
 		stage.draw();
 		
