@@ -18,9 +18,10 @@ public class Score {
 	}
 	
 	public void addCombo(int base) {
+		combo += base;
 		if (combo > maxCombo) {
-			combo += base;
 			maxCombo = combo;
+			System.out.println("max combo is " + maxCombo);
 		} else {
 			combo += base;
 		}
@@ -42,6 +43,7 @@ public class Score {
 	public void resetCombo() {
 		if (combo > maxCombo) {
 			this.maxCombo = combo;
+			
 		}
 		this.combo = 0;
 		
