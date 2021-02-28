@@ -12,6 +12,7 @@ public class SongInfo {
 	private String chartPath;
 	private String[] colors;
 	private String id;
+	private boolean useAltScheme = false;
 	
 	public String getName() {
 		//literally exists just for the song select menu.
@@ -59,6 +60,10 @@ public class SongInfo {
 	
 	public String getId() {
 		return this.id;
+	}
+	
+	public boolean getAltScheme() {
+		return this.useAltScheme;
 	}
 }
 

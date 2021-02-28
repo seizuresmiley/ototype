@@ -46,8 +46,10 @@ public class PlayScreen extends ScreenAdapter {
 	long progressbar;
 	int timeleft;
 	float[] colors;
+	PlayfieldDetails pfd;
 	public PlayScreen(Ototype game,SongInfo songInfo,PlayfieldDetails pfd) {
 		this.songInfo = songInfo;
+		this.pfd = pfd;
 		gson = new Gson();
 		colors = songInfo.getColors();
 		game.lyricFont.setColor(Color.BLACK);
@@ -164,7 +166,7 @@ public class PlayScreen extends ScreenAdapter {
 		if (currentTimePos > tbuf.lastWordTime()) {
 			music.stop();
 			music.dispose();
-			game.setScreen(new ResultScreen(game, tbuf.getScore(), songInfo,new PlayfieldDetails()));
+			game.setScreen(new ResultScreen(game, tbuf.getScore(), songInfo,pfd));
 		}
 		progressbar = (long) (((tbuf.currentTime() - currentTimePos) * 1280) / (tbuf.currentTime() - oldTime));
 		
@@ -177,7 +179,13 @@ public class PlayScreen extends ScreenAdapter {
 		shapeRenderer.rect(0,540,1280,110);
 		shapeRenderer.setColor(0.262f, 0.196f, 0.372f,1);
 		shapeRenderer.rect(824,540,456,110);
-		shapeRenderer.setColor(colors[0], colors[1], colors[2],1);
+		
+		if(songInfo.getAltScheme()) {
+			shapeRenderer.setColor(colors[3], colors[4], colors[5],1);
+		}else{
+			shapeRenderer.setColor(colors[0], colors[1], colors[2],1);
+		}
+		
 		shapeRenderer.rect(0,530,progressbar,10);
 		shapeRenderer.end();
 		
@@ -191,7 +199,10 @@ public class PlayScreen extends ScreenAdapter {
 		game.lyricFont.draw(game.batch,">" + tbuf.getCarriage(),45, 510);
 		game.menuItemFont.draw(game.batch,"Score : " + Integer.toString(tbuf.getScore().getScore()),45, 605);
 		game.menuItemFont.draw(game.batch,"Combo : " + Integer.toString(tbuf.getScore().getCombo()),860, 605);
+		game.ingameSongName.setColor(colors[3],colors[4],colors[5],1);
 		game.ingameSongName.draw(game.batch,songInfo.getName(),45, 693);
+		game.ingameSongName.setColor(Color.WHITE);
+		game.ingameSongName.draw(game.batch,"ESC : Exit | Backspace : Clear",850, 693);
 		game.batch.end();
 		
 		
